@@ -1,6 +1,7 @@
 package com.example.beckend.loaders;
 
-import com.example.beckend.entity.*;
+import com.example.beckend.entity.Role;
+import com.example.beckend.entity.User;
 import com.example.beckend.repo.RoleRepo;
 import com.example.beckend.repo.UserRepo;
 import lombok.RequiredArgsConstructor;
@@ -38,8 +39,13 @@ public class Loader implements CommandLineRunner {
                     Role.builder()
                             .name("ROLE_USER").build()
             ));
-            User user = new User( "abdugafforov ozodbek","admin", passwordEncoder.encode("123"), 12,roles, true);
-              userRepo.save(user);
+              userRepo.saveAll(List.of(
+                      new User( "abdugafforov ozodbek","admin", passwordEncoder.encode("123"), 12,roles, true),
+                      new User( "Sardor Sanoyev","admin1", passwordEncoder.encode("123"), 12,roles, true),
+                      new User( "LutFullayev Amirshox","admin2", passwordEncoder.encode("123"), 12,roles, true),
+                      new User( "Qurbonov SHaxzod","admin3", passwordEncoder.encode("123"), 12,roles, true)
+
+              ));
 
 
 

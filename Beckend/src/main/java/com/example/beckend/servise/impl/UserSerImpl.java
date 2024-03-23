@@ -4,7 +4,7 @@ import com.example.beckend.dto.LoginDto;
 import com.example.beckend.dto.RegisterDto;
 import com.example.beckend.entity.Role;
 import com.example.beckend.entity.User;
-import com.example.beckend.entity.UserProject;
+import com.example.beckend.project.UserProject;
 import com.example.beckend.repo.RoleRepo;
 import com.example.beckend.repo.UserRepo;
 import com.example.beckend.security.servise.JwtServise;

@@ -1,4 +1,4 @@
-package com.example.beckend.entity;
+package com.example.beckend.project;
 
 public interface UserProject {
     String getId();

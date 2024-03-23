@@ -1,7 +1,7 @@
 package com.example.beckend.repo;
 
 import com.example.beckend.entity.User;
-import com.example.beckend.entity.UserProject;
+import com.example.beckend.project.UserProject;
 import jakarta.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;

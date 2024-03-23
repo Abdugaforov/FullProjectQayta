@@ -3,7 +3,7 @@ package com.example.beckend.servise;
 import com.example.beckend.dto.LoginDto;
 import com.example.beckend.dto.RegisterDto;
 import com.example.beckend.entity.User;
-import com.example.beckend.entity.UserProject;
+import com.example.beckend.project.UserProject;
 
 import java.util.List;
 import java.util.Map;
