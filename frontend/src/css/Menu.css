@@ -1,0 +1,41 @@
+.card_group{
+    padding: 4px;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    width: 1140px;
+}
+.imgage{
+    width: 262px;
+    height: 264px;
+    top: 2093px;
+    left: 340px;
+}
+.menu_text{
+    width: 99px;
+    height: 19px;
+    gap: 0px;
+    font-family: Roboto;
+    font-size: 23px;
+    font-weight: 500;
+    line-height: 18.75px;
+    letter-spacing: 0.2em;
+    text-align: center;
+    color: #DC780B;
+    text-align: center;
+    margin-left: 570px;
+}
+.menu_text2{
+    width: 1000000px;
+    font-family: Roboto;
+    font-size: 30px;
+    color: #150C01;
+    margin-left: 500px;
+}
+.menu_text3{
+
+}
+.menu{
+    margin-top: 20px;
+}

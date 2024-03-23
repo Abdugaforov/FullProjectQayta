@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:wght@700&display=swap');
+.feature {
+    padding: 4px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin-top:120px;
+
+}
+
+.feature_container {
+    justify-content: center;
+    width: 1080px;
+    height: 46px;
+}
+
+.feature_text {
+    width: 99px;
+    height: 19px;
+    gap: 0px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18.75px;
+    letter-spacing: 0.2em;
+    text-align: center;
+    color: #DC780B;
+    text-align: center;
+    margin-left: 475px;
+
+}
+
+.feature_text2 {
+    width: 352px;
+    height: 35px;
+    gap: 0px;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 31.25px;
+    font-weight: 700;
+    line-height: 35px;
+    text-align: center;
+    color: #150C01;
+    text-align: center;
+    margin-left: 360px;
+
+}
+
+
+.box_group{
+width: 1080px;
+    display:flex;
+    justify-content: space-between;
+}
+.box{
+    width: 300px;
+    height: 228px;
+    text-align: center;
+    margin-top:20px;
+
+}
+.feature_box_img{
+    width: 88px;
+    height: 88px;
+    top: 920px;
+    left: 1066px;
+    gap: 0px;
+
+
+
+}
+.box_img{
+    width: 44.95px;
+    height: 44.46px;
+    top: 942px;
+    left: 308px;
+    gap: 0px;
+    margin-left: 120px;
+
+
+}
+.box_h1{
+
+}
+.box_p{
+
+}

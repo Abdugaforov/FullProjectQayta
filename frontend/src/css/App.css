@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
+.header {
+    padding: 4px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.header_container {
+    display: flex;
+    justify-content: space-between;
+    width: 1140px;
+    height: 46px;
+    align-items: center;
+    padding: 1px;
+}
+
+.box1_container {
+    display: flex;
+}
+
+.ul_group {
+    display: flex;
+    justify-content: space-between;
+    width: 448px;
+    height: 19px;
+    gap: 0px;
+}
+
+.booking_button {
+    width: 155px;
+    height: 46px;
+    top: 30px;
+    left: 1135px;
+    gap: 0px;
+    border-radius: 5px 0px 0px 0px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.75px;
+    text-align: center;
+    color: #FFFFFF;
+    background: #DC780B;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.header_img {
+    width: 44px;
+    height: 43px;
+    top: 31px;
+    left: 150px;
+    gap: 0px;
+}
+
+.li, .li1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.75px;
+    text-align: left;
+    list-style-type: none;
+}
+
+.li1 {
+    color: #DC780B; /* Removed semicolon */
+}
+
+.main{
+    padding: 4px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.main_container{
+    display: flex;
+    justify-content: space-between;
+    width: 1140px;
+    height: 46px;
+
+
+}
+.main_box1{
+    margin-top: 100px;
+
+}
+.main_Text_h1{
+    width: 555px;
+    height: 161px;
+    gap: 0px;
+
+}
+.main_Text_p{
+    width: 555px;
+    height: 43px;
+    gap: 0px;
+    opacity: 90%;
+
+}
+.main_btn_group{
+    width: 358px;
+    height: 60px;
+    top: 532px;
+    left: 150px;
+    gap: 0px;
+    border-radius: 5px 0px 0px 0px;
+
+}
+.main_button_order {
+    width: 138px;
+    height: 60px;
+    border-radius: 5px 0px 0px 0px;
+    background: #DC780B;
+    border: 1.5px solid #FFFFFF;
+    font-family: "Roboto";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18.75px;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+
+
+
+
+.main_button_food_detail {
+    width: 140px;
+    height: 60px;
+    top: 532px;
+    left: 338px;
+    gap: 0px;
+    border-radius: 5px 0px 0px 0px;
+    border: 1.5px solid #DC780B;
+    font-family: "Roboto";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18.75px;
+    text-align: left;
+    color: #DC780B;
+    background-color: #FFFFFF;
+}
+
+.main_box2{
+}
+.main_img{
+    width: 801px;
+    height: 670px;
+    top: 30px;
+    left: 636px;
+    gap: 0px;
+margin-bottom: 600px;
+
+}
