@@ -13,8 +13,9 @@ import java.util.List;
 public class OrderImpl implements OrderService {
     private OrderRepo orderRepo;
 
+
     @Override
     public List<Order> getOrderByProductId(Long productId) {
-        return null;
+        return orderRepo.findAllByProductId(productId);
     }
 }

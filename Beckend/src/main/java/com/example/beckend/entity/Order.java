@@ -16,7 +16,7 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private Integer count;
+    private Integer productCount;
     private Integer totalPrice;
 
     @ManyToOne
@@ -25,9 +25,9 @@ public class Order {
     @ManyToOne
     private User user;
 
-    public Order(String name, Integer count, Integer totalPrice, Product product, User user) {
+    public Order(String name, Integer productCount, Integer totalPrice, Product product, User user) {
         this.name = name;
-        this.count = count;
+        this.productCount = productCount;
         this.totalPrice = totalPrice;
         this.product = product;
         this.user = user;

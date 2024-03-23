@@ -1,10 +1,10 @@
 package com.example.beckend.servise;
 
-import com.example.beckend.entity.Order;
+import com.example.beckend.entity.Basket;
 
 import java.util.List;
 
 public interface BasketService {
-    List<Order>getOrderByProductId(Long productId);
+    List<Basket>getOrderByProductId(Long productId);
 
 }
