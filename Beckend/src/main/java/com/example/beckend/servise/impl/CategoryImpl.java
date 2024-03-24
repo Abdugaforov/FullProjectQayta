@@ -11,8 +11,6 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-
 @Service
 @RequiredArgsConstructor
 public class CategoryImpl implements CategoryService {
@@ -20,8 +18,8 @@ public class CategoryImpl implements CategoryService {
     private final UserRepo userRepo;
 
     @Override
-    public List<Category> getAllCategory() {
-        return categoryRepo.findAll();
+    public HttpEntity<?> getAllCategory() {
+        return ResponseEntity.ok(categoryRepo.findAll());
     }
 
     @Override
