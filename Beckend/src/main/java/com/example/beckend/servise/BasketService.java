@@ -5,6 +5,6 @@ import com.example.beckend.entity.Basket;
 import java.util.List;
 
 public interface BasketService {
-    List<Basket>getOrderByProductId(Long productId);
+    List<Basket>getOrderByUserId(Long userId);
 
 }

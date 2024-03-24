@@ -1,9 +1,9 @@
 import './css/Menu.css';
-import pc1 from "./photos/Mask Group.svg";
-import pc2 from "./photos/Mask Group (2).svg";
-import pc3 from "./photos/Mask Group (3).svg";
-import pc4 from "./photos/Mask Group (4).svg";
-import pc5 from "./photos/Mask Group (1).svg";
+import pc1 from "./photos/Group 93.svg";
+import pc2 from "./photos/Group 93.svg";
+import pc3 from "./photos/Group 94.svg";
+import pc4 from "./photos/Group 94.svg";
+import pc5 from "./photos/Group 94.svg";
 
 function Menu() {
     return (

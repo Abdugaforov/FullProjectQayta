@@ -5,9 +5,6 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.CreationTimestamp;
-
-import java.time.LocalDateTime;
 
 @Entity(name = "basket")
 @Data
@@ -16,17 +13,16 @@ import java.time.LocalDateTime;
 @Builder
 public class Basket {
 
-    @ManyToOne
-    Product product;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private Integer productCount;
     private Integer totalPrice;
-    @CreationTimestamp
-    @Column(columnDefinition = "timestamp default current_timestamp")
-    private LocalDateTime soldOutTime;
+
+    @ManyToOne
+    Product product;
     @ManyToOne
     private User user;
 

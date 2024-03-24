@@ -6,5 +6,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
 public interface BasketRepo extends JpaRepository<Basket,Long> {
-    List<Basket> findAllByProductId(Long productId);
+
+    List<Basket> findAllByUserId(Long userId);
 }

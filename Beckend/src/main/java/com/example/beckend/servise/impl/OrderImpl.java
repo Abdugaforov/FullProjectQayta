@@ -15,7 +15,7 @@ public class OrderImpl implements OrderService {
 
 
     @Override
-    public List<Order> getOrderByProductId(Long productId) {
-        return orderRepo.findAllByProductId(productId);
+    public List<Order> getOrderByUserId(Long userId) {
+        return orderRepo.findAllByUserId(userId);
     }
 }

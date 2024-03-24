@@ -5,6 +5,9 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.CreationTimestamp;
+
+import java.time.LocalDateTime;
 
 @Entity(name = "orders")
 @Data
@@ -18,7 +21,9 @@ public class Order {
     private String name;
     private Integer productCount;
     private Integer totalPrice;
-
+    @CreationTimestamp
+    @Column(columnDefinition = "timestamp default current_timestamp")
+    private LocalDateTime soldOutTime;
     @ManyToOne
     private Product product;
 

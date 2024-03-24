@@ -14,8 +14,10 @@ public class BasketImpl implements BasketService {
 private final BasketRepo basketRepo;
 
 
+
+
     @Override
-    public List<Basket> getOrderByProductId(Long productId) {
-        return  basketRepo.findAllByProductId(productId);
+    public List<Basket> getOrderByUserId(Long userId) {
+        return basketRepo.findAllByUserId(userId);
     }
 }
