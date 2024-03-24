@@ -13,9 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequiredArgsConstructor
-@CrossOrigin
 @RequestMapping("/category")
-@RequiredArgsConstructor
 public class CategoryController {
     private final CategoryService categoryService;
 
