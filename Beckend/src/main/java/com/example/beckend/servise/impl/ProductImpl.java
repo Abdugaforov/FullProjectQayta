@@ -29,15 +29,18 @@ public class ProductImpl implements ProductService {
     public HttpEntity<?> saveProduct(ProductDto dto) {
         Category category = categoryRepo.findById(dto.categoryId()).orElseThrow();
         User user = userRepo.findById(dto.userId()).orElseThrow();
-        productRepo.save(new Product(
-                dto.name(),
-                dto.productCount(),
-                dto.isActive(),
-                dto.price(),
-                category,
-                user
-        ));
-
+        if (dto.name() != null && dto.productCount() != null && dto.price() != null
+                && category.getId() != null && user.getId() != null
+        ) {
+            productRepo.save(new Product(
+                    dto.name(),
+                    dto.productCount(),
+                    dto.isActive(),
+                    dto.price(),
+                    category,
+                    user
+            ));
+        }
         return ResponseEntity.ok("product saved");
     }
 
@@ -45,5 +48,23 @@ public class ProductImpl implements ProductService {
     public HttpEntity<?> deleteProductById(Long id) {
         productRepo.deleteById(id);
         return ResponseEntity.ok("product deleted");
+    }
+
+    @Override
+    public HttpEntity<?> updateProduct(Long id, ProductDto dto) {
+        Category category = categoryRepo.findById(dto.categoryId()).orElseThrow();
+        User user = userRepo.findById(dto.userId()).orElseThrow();
+        Product product = productRepo.findById(id).orElseThrow();
+        if (dto.name() != null && dto.productCount() != null && dto.price() != null
+                && category.getId() != null && user.getId() != null
+        ) {
+            product.setName(dto.name());
+            product.setProductCount(dto.productCount());
+            product.setIsActive(dto.isActive());
+            product.setPrice(dto.price());
+            product.setUser(user);
+            product.setCategory(category);
+        }
+        return ResponseEntity.ok("updated");
     }
 }

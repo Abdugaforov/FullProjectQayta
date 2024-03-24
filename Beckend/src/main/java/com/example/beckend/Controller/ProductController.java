@@ -30,5 +30,9 @@ public class ProductController {
         return productService.deleteProductById(id);
     }
 
-
+    @PutMapping("/{id}")
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_SUPER_ADMIN')")
+    public HttpEntity<?> updateProduct(@PathVariable Long id, @RequestBody ProductDto dto){
+        return productService.updateProduct(id, dto);
+    }
 }
