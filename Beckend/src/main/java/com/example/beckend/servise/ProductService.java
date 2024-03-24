@@ -1,9 +1,7 @@
 package com.example.beckend.servise;
 
-import com.example.beckend.entity.Product;
-
-import java.util.List;
+import org.springframework.http.HttpEntity;
 
 public interface ProductService {
-    List<Product>getProductByCateGoryId(Long categoryId);
+    HttpEntity<?> getProductByCateGoryId(Long categoryId);
 }
