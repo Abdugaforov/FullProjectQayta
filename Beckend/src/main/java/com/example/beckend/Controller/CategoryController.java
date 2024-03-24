@@ -9,7 +9,6 @@ import org.springframework.security.access.prepost.PreAuthorize;
 
 @RestController
 @RequiredArgsConstructor
-@CrossOrigin
 @RequestMapping("/category")
 public class CategoryController {
     private final CategoryService categoryService;
