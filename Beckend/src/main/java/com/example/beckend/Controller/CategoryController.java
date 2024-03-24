@@ -16,14 +16,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-<<<<<<< HEAD
 @RequiredArgsConstructor
 @CrossOrigin
 @RequestMapping("/category")
-public class CategoryController {
-=======
-@RequestMapping("/category")
-@RequiredArgsConstructor
 public class CategoryController {
     private final CategoryService categoryService;
 
@@ -32,5 +27,4 @@ public class CategoryController {
     public HttpEntity<?> saveCategory(@RequestBody CategoryDto dto){
         return categoryService.saveCategory(dto);
     }
->>>>>>> github/master
 }
