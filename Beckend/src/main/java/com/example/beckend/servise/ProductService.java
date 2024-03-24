@@ -7,4 +7,7 @@ public interface ProductService {
     HttpEntity<?> getProductByCateGoryId(Long categoryId);
 
     HttpEntity<?> saveProduct(ProductDto dto);
+
+    HttpEntity<?> deleteProductById(Long id);
+
 }

@@ -23,4 +23,12 @@ public class ProductController {
     public HttpEntity<?> saveProduct(@RequestBody ProductDto dto) {
         return productService.saveProduct(dto);
     }
+
+    @DeleteMapping("/{id}")
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_SUPER_ADMIN')")
+    public HttpEntity<?> deleteProductById(@PathVariable Long id){
+        return productService.deleteProductById(id);
+    }
+
+
 }

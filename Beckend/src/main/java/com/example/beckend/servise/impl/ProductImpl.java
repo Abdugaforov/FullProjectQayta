@@ -40,4 +40,10 @@ public class ProductImpl implements ProductService {
 
         return ResponseEntity.ok("product saved");
     }
+
+    @Override
+    public HttpEntity<?> deleteProductById(Long id) {
+        productRepo.deleteById(id);
+        return ResponseEntity.ok("product deleted");
+    }
 }
