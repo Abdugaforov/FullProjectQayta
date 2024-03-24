@@ -46,6 +46,8 @@ public class Security_config {
                         .requestMatchers("/timeStudent","/timeStudent/by","/timeStudent/post").permitAll()
                         .requestMatchers("/category").permitAll()
                         .requestMatchers("/product").permitAll()
+                        .requestMatchers("/order").hasAnyRole("ROLE_ADMIN", "ROLE_SUPER_ADMIN")
+                        .requestMatchers("/basket").hasAnyRole("ROLE_ADMIN", "ROLE_SUPER_ADMIN")
                         .anyRequest().authenticated()
         ).addFilterBefore(filter, UsernamePasswordAuthenticationFilter.class);
         return httpSecurity.build();

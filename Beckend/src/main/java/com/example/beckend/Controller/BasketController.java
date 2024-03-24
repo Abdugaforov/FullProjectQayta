@@ -9,6 +9,5 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 @CrossOrigin
 @RequestMapping("/basket")
-public class BasketController
-{
+public class BasketController {
 }
