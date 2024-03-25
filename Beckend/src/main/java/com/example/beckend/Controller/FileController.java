@@ -16,7 +16,7 @@ import java.util.UUID;
 public class FileController {
     @GetMapping("/{name}")
     public void getFile(@PathVariable String name, HttpServletResponse response) throws IOException {
-        FileInputStream inputStream = new FileInputStream("src/main/resources/photos/" + name);
+        FileInputStream inputStream = new FileInputStream("beckend/src/main/resources/photos/" + name);
 
         ServletOutputStream outputStream = response.getOutputStream();
 
@@ -31,7 +31,7 @@ public class FileController {
         String image = UUID.randomUUID() + file.getOriginalFilename();
 
         FileOutputStream outputStream =
-                new FileOutputStream("src/main/resources/photos/" + image);
+                new FileOutputStream("beckend/src/main/resources/photos/" + image);
         outputStream.write(file.getBytes());
         outputStream.close();
 
@@ -40,7 +40,7 @@ public class FileController {
 
     @DeleteMapping("/{name}")
     public void deleteFile(@PathVariable String name) {
-        File file = new File("src/main/resources/photos/" + name);
+        File file = new File("beckend/src/main/resources/photos/" + name);
         file.delete();
     }
 }
