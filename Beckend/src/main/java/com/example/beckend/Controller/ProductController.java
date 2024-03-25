@@ -13,7 +13,11 @@ import org.springframework.web.bind.annotation.*;
 public class ProductController {
     private final ProductService productService;
 
-    @GetMapping
+    @GetMapping("/all")
+    public HttpEntity<?> getAllProducts(){
+        return productService.getAllProducts();
+    }
+    @GetMapping("/by")
     public HttpEntity<?> getProductsByCategoryId(@RequestParam Long categoryId){
         return productService.getProductByCateGoryId(categoryId);
     }

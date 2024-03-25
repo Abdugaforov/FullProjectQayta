@@ -11,4 +11,6 @@ public interface ProductService {
     HttpEntity<?> deleteProductById(Long id);
 
     HttpEntity<?> updateProduct(Long id, ProductDto dto);
+
+    HttpEntity<?> getAllProducts();
 }

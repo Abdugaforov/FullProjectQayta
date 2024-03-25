@@ -43,6 +43,8 @@ public class Security_config {
                         .requestMatchers("/change").permitAll()
                         .requestMatchers("/category").permitAll()
                         .requestMatchers("/product").permitAll()
+                        .requestMatchers("/product/by").permitAll()
+                        .requestMatchers("/product/all").permitAll()
                         .requestMatchers("/order").permitAll()
                         .anyRequest().authenticated()
         ).addFilterBefore(filter, UsernamePasswordAuthenticationFilter.class);

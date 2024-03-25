@@ -29,10 +29,10 @@ public class ProductImpl implements ProductService {
     public HttpEntity<?> saveProduct(ProductDto dto) {
         Category category = categoryRepo.findById(dto.categoryId()).orElseThrow();
         User user = userRepo.findById(dto.userId()).orElseThrow();
-        if (dto.name() != null && dto.productCount() != null && dto.productCount()>0
-                && dto.price() != null && dto.price()>0
+        if (dto.name() != null && dto.productCount() != null && dto.productCount() > 0
+                && dto.price() != null && dto.price() > 0
                 && category.getId() != null && user.getId() != null
-                && dto.image()!=null
+                && dto.image() != null
         ) {
             productRepo.save(
                     Product.builder()
@@ -71,5 +71,10 @@ public class ProductImpl implements ProductService {
             product.setCategory(category);
         }
         return ResponseEntity.ok("updated");
+    }
+
+    @Override
+    public HttpEntity<?> getAllProducts() {
+        return ResponseEntity.ok(productRepo.findAll());
     }
 }
