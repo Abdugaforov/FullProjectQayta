@@ -2,10 +2,12 @@ package com.example.beckend.dto;
 
 public record OrderDto(
          String name,
-         Integer count,
+         Integer productCount,
          Integer totalPrice,
 
-         Long productId
+         Long productId,
+         Long userId,
+         Long cardId
 
 ) {
 }

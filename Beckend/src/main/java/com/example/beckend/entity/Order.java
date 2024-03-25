@@ -30,11 +30,15 @@ public class Order {
     @ManyToOne
     private User user;
 
-    public Order(String name, Integer productCount, Integer totalPrice, Product product, User user) {
+    @ManyToOne
+    private Card card;
+
+    public Order(String name, Integer productCount, Integer totalPrice, Product product, User user, Card card) {
         this.name = name;
         this.productCount = productCount;
         this.totalPrice = totalPrice;
         this.product = product;
         this.user = user;
+        this.card = card;
     }
 }
