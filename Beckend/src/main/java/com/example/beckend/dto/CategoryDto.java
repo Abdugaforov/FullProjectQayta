@@ -1,6 +1,7 @@
 package com.example.beckend.dto;
 
 public record CategoryDto(
-        String name
+        String name,
+        Long userId
 ) {
 }

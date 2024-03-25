@@ -21,8 +21,8 @@ public class OrderController {
 
     @PostMapping
     @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_SUPER_ADMIN')")
-    public HttpEntity<?> saveOrder(@RequestHeader String refreshToken, @RequestBody OrderDto dto){
-        Order order = orderService.saveOrder(Long.parseLong(jwtServise.extractJwt(refreshToken).getPayload().getSubject()),dto);
+    public HttpEntity<?> saveOrder(@RequestBody OrderDto dto){
+        Order order = orderService.saveOrder(dto);
         return ResponseEntity.ok(order);
     }
 

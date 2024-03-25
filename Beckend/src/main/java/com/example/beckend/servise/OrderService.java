@@ -8,5 +8,5 @@ import java.util.List;
 public interface OrderService {
     List<Order>getOrderByUserId(Long userId);
 
-    Order saveOrder(Long userId, OrderDto dto);
+    Order saveOrder(OrderDto dto);
 }

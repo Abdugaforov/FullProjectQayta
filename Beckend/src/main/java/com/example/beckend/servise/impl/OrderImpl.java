@@ -25,8 +25,8 @@ public class OrderImpl implements OrderService {
     }
 
     @Override
-    public Order saveOrder(Long userId, OrderDto dto) {
-        User user = userRepo.findById(userId).orElseThrow();
+    public Order saveOrder(OrderDto dto) {
+        User user = userRepo.findById(dto.userId()).orElseThrow();
         if (user.getId()!=null){
             Order order = Order.builder()
                     .totalPrice(dto.totalPrice())

@@ -4,6 +4,7 @@ import com.example.beckend.dto.LoginDto;
 import com.example.beckend.dto.RegisterDto;
 import com.example.beckend.entity.User;
 import com.example.beckend.repo.UserRepo;
+import com.example.beckend.security.servise.JwtServise;
 import com.example.beckend.servise.UserServise;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpEntity;
@@ -20,6 +21,13 @@ import java.util.Optional;
 @CrossOrigin
 public class UserController {
     private final UserServise service;
+    private final JwtServise jwtServise;
+
+    @GetMapping("/user/getId")
+    public HttpEntity<?> getUserId(@RequestHeader String refreshToken){
+        Long userId = Long.parseLong(jwtServise.extractJwt(refreshToken).getPayload().getSubject());
+        return ResponseEntity.ok(userId);
+    }
 
     @PostMapping("/register")
     public HttpEntity<?> register(@RequestBody RegisterDto dto){
