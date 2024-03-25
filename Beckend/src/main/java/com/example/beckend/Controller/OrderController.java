@@ -19,7 +19,7 @@ public class OrderController {
     private final OrderService orderService;
 
     @PostMapping
-    @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_SUPER_ADMIN')")
+    @PreAuthorize("hasAnyRole('ROlE_USER','ROLE_ADMIN', 'ROLE_SUPER_ADMIN')")
     public HttpEntity<?> saveOrder(@RequestBody OrderDto dto){
         Order order = orderService.saveOrder(dto);
         return ResponseEntity.ok(order);
