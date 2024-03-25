@@ -13,6 +13,11 @@ import org.springframework.web.bind.annotation.*;
 public class CategoryController {
     private final CategoryService categoryService;
 
+    @GetMapping
+    public HttpEntity<?> getCategories(){
+        return categoryService.getAllCategory();
+    }
+
     @PostMapping
     @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_SUPER_ADMIN')")
     public HttpEntity<?> saveCategory(@RequestBody CategoryDto dto){
