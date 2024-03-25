@@ -23,10 +23,6 @@ public class OrderImpl implements OrderService {
     private final ProductRepo productRepo;
     private final OrderProductRepo orderProductRepo;
 
-    @Override
-    public List<Order> getOrderByUserId(Long userId) {
-        return orderRepo.findAllByUserId(userId);
-    }
 
     @Override
     public Order saveOrder(OrderDto dto) {
