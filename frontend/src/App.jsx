@@ -1,6 +1,8 @@
-import './css/App.css'
+import '/src/css/App.css'
 import picture from "./photos/CSmJnTefxM 1.svg"
+import {useNavigate} from "react-router-dom";
 function App() {
+    const x = useNavigate();
     return (
         <div>
             <div className={"header"}>
@@ -9,10 +11,10 @@ function App() {
                     <div className={"box1_container"}>
                         <img className={"header_img"} src={picture} alt=""/>
                         <ul className={"ul_group"}>{}
-                            <li className={"li1"}>Home</li>
-                            <li className={"li"}>About us</li>
-                            <li className={"li"}>Menu</li>
-                            <li className={"li"}>Features</li>
+                            <li onClick={(e)=>x("")} className={"li1"}>Home</li>
+                            <li onClick={e=>{x("/aboutUs")}} className={"li"}>About us</li>
+                            <li onClick={e=>{x("/menu")}} className={"li"}>Menu</li>
+                            <li onClick={e=>x("/features")} className={"li"}>Features</li>
                             <li className={"li"}>contact us</li>
                         </ul>
                     </div>

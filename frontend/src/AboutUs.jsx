@@ -1,4 +1,4 @@
-import './css/AboutUs.css'
+import '/src/css/AboutUs.css'
 import picture from "./photos/FmlS61J9LP 1.svg";
 function AboutUs() {
     return (

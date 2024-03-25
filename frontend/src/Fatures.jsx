@@ -1,4 +1,4 @@
-import './css/Feature.css'
+import '/src/css/Feature.css'
 import  rasm1 from "./photos/Group 94.svg"
 import  rasm2 from "./photos/food-delivery.svg"
 import  rasm3 from "./photos/Group 93.svg"

@@ -1,0 +1,52 @@
+/* Assuming your CSS file is named styles.css */
+
+/* Center the card */
+.card {
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+/* Style the header */
+.card-header {
+    color: white;
+}
+
+/* Style the form fields */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Style the Save button */
+.card-footer {
+    text-align: center;
+}
+
+.btn-dark {
+    background-color: #343a40;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-dark:hover {
+    background-color: #23272b;
+}
+
+/* Optional: Add some spacing between rows */
+.row {
+    margin-bottom: 20px;
+}
