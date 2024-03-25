@@ -3,7 +3,6 @@ package com.example.beckend.Controller;
 import com.example.beckend.dto.LoginDto;
 import com.example.beckend.dto.RegisterDto;
 import com.example.beckend.entity.User;
-import com.example.beckend.repo.UserRepo;
 import com.example.beckend.security.servise.JwtServise;
 import com.example.beckend.servise.UserServise;
 import lombok.RequiredArgsConstructor;
@@ -41,8 +40,8 @@ public class UserController {
         return ResponseEntity.status(200).body(service.login(dto));
     }
     @PostMapping("/refresh")
-    public HttpEntity<?>refresh(@RequestHeader String Authorization){
-      return ResponseEntity.ok(service.refreshToken(Authorization));
+    public HttpEntity<?>refresh(@RequestHeader String refreshToken){
+      return ResponseEntity.ok(service.refreshToken(refreshToken));
     }
 
     @GetMapping("/settings")
