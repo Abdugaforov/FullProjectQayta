@@ -7,7 +7,7 @@ import org.springframework.http.HttpEntity;
 import java.util.List;
 
 public interface OrderService {
-
-    HttpEntity<?> saveOrder(OrderDto dto);
     List<Order>getOrderByUserId(Long userId);
+
+    Order saveOrder(OrderDto dto);
 }

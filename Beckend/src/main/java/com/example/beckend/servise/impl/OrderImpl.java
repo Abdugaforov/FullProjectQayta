@@ -33,7 +33,7 @@ public class OrderImpl implements OrderService {
         User user = userRepo.findById(dto.userId()).orElseThrow();
         Card card = cardRepo.findById(dto.cardId()).orElseThrow();
         Product product = productRepo.findById(dto.productId()).orElseThrow();
-        if (user!=null){
+        if (user.getId()!=null){
             Order order = Order.builder()
                     .name(dto.name())
                     .productCount(dto.productCount())
