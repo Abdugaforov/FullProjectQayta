@@ -82,8 +82,8 @@ public class UserSerImpl implements UserServise {
     }
 
     @Override
-    public String refreshToken(String token) {
-        Claims payload = jwtServise.extractJwt(token).getPayload();
+    public String refreshToken(String refreshToken) {
+        Claims payload = jwtServise.extractJwt(refreshToken).getPayload();
         String id =payload.getSubject();
         String newJwt = jwtServise.generateJwt(id);
         return newJwt;
