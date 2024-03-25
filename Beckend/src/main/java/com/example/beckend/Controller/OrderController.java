@@ -2,6 +2,7 @@ package com.example.beckend.Controller;
 
 import com.example.beckend.dto.OrderDto;
 import com.example.beckend.entity.Order;
+import com.example.beckend.security.servise.JwtServise;
 import com.example.beckend.servise.OrderService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpEntity;
@@ -16,11 +17,12 @@ import java.util.List;
 @RequestMapping("/order")
 public class OrderController {
     private final OrderService orderService;
+    private final JwtServise jwtServise;
 
     @PostMapping
     @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_SUPER_ADMIN')")
-    public HttpEntity<?> saveOrder(@RequestBody OrderDto dto){
-        Order order = orderService.saveOrder(dto);
+    public HttpEntity<?> saveOrder(@RequestHeader String refreshToken, @RequestBody OrderDto dto){
+        Order order = orderService.saveOrder(Long.parseLong(jwtServise.extractJwt(refreshToken).getPayload().getSubject()),dto);
         return ResponseEntity.ok(order);
     }
 

@@ -2,7 +2,6 @@ package com.example.beckend.servise.impl;
 
 import com.example.beckend.dto.OrderDto;
 import com.example.beckend.entity.Order;
-import com.example.beckend.entity.Product;
 import com.example.beckend.entity.User;
 import com.example.beckend.repo.OrderRepo;
 import com.example.beckend.repo.ProductRepo;
@@ -26,8 +25,8 @@ public class OrderImpl implements OrderService {
     }
 
     @Override
-    public Order saveOrder(OrderDto dto) {
-        User user = userRepo.findById(dto.userId()).orElseThrow();
+    public Order saveOrder(Long userId, OrderDto dto) {
+        User user = userRepo.findById(userId).orElseThrow();
         if (user.getId()!=null){
             Order order = Order.builder()
                     .totalPrice(dto.totalPrice())

@@ -41,13 +41,9 @@ public class Security_config {
                         .requestMatchers("/deletes").permitAll()
                         .requestMatchers("/user").permitAll()
                         .requestMatchers("/change").permitAll()
-                        .requestMatchers("/groups","/groups/post").permitAll()
-                        .requestMatchers("/timeTable","timeTable/byId","/timeTable/post").permitAll()
-                        .requestMatchers("/timeStudent","/timeStudent/by","/timeStudent/post").permitAll()
                         .requestMatchers("/category").permitAll()
                         .requestMatchers("/product").permitAll()
-                        .requestMatchers("/order").hasAnyRole("ROLE_ADMIN", "ROLE_SUPER_ADMIN")
-                        .requestMatchers("/basket").hasAnyRole("ROLE_ADMIN", "ROLE_SUPER_ADMIN")
+                        .requestMatchers("/order").permitAll()
                         .anyRequest().authenticated()
         ).addFilterBefore(filter, UsernamePasswordAuthenticationFilter.class);
         return httpSecurity.build();
