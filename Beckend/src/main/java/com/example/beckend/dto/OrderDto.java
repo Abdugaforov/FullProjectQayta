@@ -1,13 +1,11 @@
 package com.example.beckend.dto;
 
-public record OrderDto(
-         String name,
-         Integer productCount,
-         Integer totalPrice,
+import java.util.List;
 
-         Long productId,
+public record OrderDto(
+         Integer totalPrice,
          Long userId,
-         Long cardId
+         List<OrderProductDto> orderProducts
 
 ) {
 }
