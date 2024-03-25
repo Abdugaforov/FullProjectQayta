@@ -5,6 +5,7 @@ import Menu from "./Menu.jsx";
 import Features from "./Fatures.jsx";
 import Register  from "./auth/Register.jsx"
 import Login  from "./auth/Login.jsx"
+import CardPage from "./CardPage.jsx";
 function Router() {
 
     return (
@@ -16,6 +17,7 @@ function Router() {
                 <Route path={"/features"} element={<Features/>}/>
                 <Route path={"/"} element={<Register/>}/>
                 <Route path={"/login"} element={<Login/>}/>
+                <Route path={"/cart"} element={<CardPage/>}/>
             </Routes>
         </div>
     )
