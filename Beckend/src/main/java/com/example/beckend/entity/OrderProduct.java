@@ -19,4 +19,5 @@ public class OrderProduct {
     private Order order;
     @ManyToOne
     private Product product;
+    private Integer count;
 }
