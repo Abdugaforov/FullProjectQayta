@@ -6,6 +6,7 @@ import com.example.beckend.servise.OrderService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -17,13 +18,9 @@ public class OrderController {
     private final OrderService orderService;
 
     @PostMapping
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_SUPER_ADMIN')")
     public HttpEntity<?> saveOrder(@RequestBody OrderDto dto){
         Order order = orderService.saveOrder(dto);
-        return ResponseEntity.ok(order);
-    }
-    @GetMapping
-    public HttpEntity<?> getOrderByUserId(@RequestParam Long userId){
-        List<Order>order = orderService.getOrderByUserId(userId);
         return ResponseEntity.ok(order);
     }
 

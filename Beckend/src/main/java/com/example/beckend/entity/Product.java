@@ -19,17 +19,11 @@ public class Product {
     private Integer productCount;
     private Boolean isActive;
     private Integer price;
+    private String image;
     @ManyToOne
     private Category category;
     @ManyToOne
     private User user;
 
-    public Product(String name, Integer productCount, Boolean isActive, Integer price, Category category, User user) {
-        this.name = name;
-        this.productCount = productCount;
-        this.isActive = isActive;
-        this.price = price;
-        this.category = category;
-        this.user = user;
-    }
+
 }
