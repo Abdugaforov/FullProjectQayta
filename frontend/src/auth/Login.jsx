@@ -21,7 +21,7 @@ function Login() {
         }).catch(()=>alert("parol xato"))
     }
     return (
-        <div className={"offset-4"}>
+        <div className={""}>
             <div className={"card w-50 p-4 text-center my-5 bg-dark"}>
                 <h3 className={"text-white"}>Login</h3>
                 <input
